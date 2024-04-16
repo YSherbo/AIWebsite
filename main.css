@@ -1,0 +1,277 @@
+﻿  
+  
+@font-face {
+    font-family: bold;
+    src: url("Font/Bold.ttf");
+}
+
+@font-face {
+    font-family: normal;
+    src: url(Font/Regular.ttf);
+}
+
+* {
+	box-sizing: border-box;
+}
+body {
+	font-family: bold, normal;
+	line-height: 1.6;
+	margin: 0;
+	min-height: 100vh;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+
+h2,
+h3,
+a {
+	color: white;
+}
+
+a {
+	text-decoration: none;
+}
+
+
+
+.logo {
+	margin: 0;
+	font-size: 1.45em;
+}
+
+.main-nav {
+	margin-top: 5px;
+
+}
+.logo a,
+.main-nav a {
+	padding: 10px 15px;
+	text-transform: uppercase;
+	text-align: center;
+	display: block;
+}
+
+.main-nav a {
+	color: white;
+	font-size: .99em;
+}
+
+.main-nav a:hover {
+	color: #718daa;
+}
+
+
+
+.header {
+	padding-top: .5em;
+	padding-bottom: .5em;
+  background-color: rgba(0, 0, 0, 0.61);
+  backdrop-filter: blur(15px);
+	-webkit-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+
+/* ================================= 
+  Media Queries
+==================================== */
+
+
+
+
+@media (min-width: 769px) {
+	.header,
+	.main-nav {
+		display: flex;
+	}
+	.header {
+		flex-direction: column;
+		align-items: center;
+    	.header{
+		width: 80%;
+		margin: 0 auto;
+		max-width: 1150px;
+	}
+	}
+
+}
+
+@media (min-width: 1025px) {
+	.header {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+}
+
+body {
+    background-color: black;
+}
+
+#background-video {
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+img {
+    border-radius: 130px;
+    box-shadow: 15px 15px 15px 15px rgba(0, 0, 0, 0.314); 
+
+}
+
+h1 {
+    text-align: center;
+    font-family: bold;
+    font-size: 100px;
+    color: white;
+}
+h2{
+    text-align: center;
+    font-family: bold;
+    font-size: 64px;
+    border: #000000a2;
+    color: white;
+}
+h3{
+    text-align: center;
+    font-family: normal;
+    font-size: 32px;
+    color: white;
+}
+
+.fullscreen{
+    width: 100%;
+    height: 100%;
+}
+
+.card2 {
+    background-color: rgba(0, 0, 0, 0.61);
+    backdrop-filter: blur(15px);
+    border-radius: 50px;
+    width: 70%;
+    display: inline-block;
+    box-shadow: 15px 15px 15px 15px rgba(0, 0, 0, 0.314); 
+}
+
+.card4 {
+  background-color: rgba(0, 0, 0, 0.61);
+  backdrop-filter: blur(15px);
+  border-radius: 50px;
+  width: 100%;
+  display: inline-block;
+  box-shadow: 15px 15px 15px 15px rgba(0, 0, 0, 0.314); 
+}
+
+.card3 {
+  background-color: rgba(0, 0, 0, 0.61);
+  backdrop-filter: blur(15px);
+  border-radius: 50px;
+  width: 25%;
+  margin-left: 30px;
+  margin-right: 30px;
+  display: inline-block;
+  box-shadow: 15px 15px 15px 15px rgba(0, 0, 0, 0.314); 
+}
+
+iframe {
+  border-radius: 50px;
+}
+
+.card3 img{
+  border-radius: 30px;
+}
+
+.card2 img{
+  border-radius: 30px;
+}
+
+.card4 img{
+  border-radius: 30px;
+}
+
+
+
+.imageSlider {
+    margin: auto;
+    position: relative;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+
+.sliderTrack {
+    display: flex;
+    width: calc(1620px * 10);
+    animation: scroll 70s linear infinite;
+}
+
+.slide {
+    height: 500px;
+    width: 700px;
+    display: flex;
+    align-items: center;
+    perspective: 100px;
+    padding: 15px;
+  }
+  
+  .imageSlider::before,
+  .imageSlider::after {
+    background: linear-gradient(to right, black 0%, black 100%);
+    content: '';
+    height: 100%;
+    position: absolute;
+    width: 15%;
+    z-index: 5;
+  }
+  
+.imageSlider::before {
+    left: 0;
+    top: 0;
+    width: 1px;
+}
+  
+.imageSlider::after {
+    right: 0;
+    top: 0;
+    width: 1px;
+}
+
+@keyframes scroll {
+    0%{
+      transform: translateX(0);
+    }
+  
+    100%{
+      transform: translateX(calc(-250px * 17));
+    }
+}
+
+button {
+  border-radius: 50px;
+  border: #00000000;
+  font-family: bold;
+  font-size: 30px;
+  padding: 15px;
+  box-shadow: 15px 7px 15px 3px rgba(0,0,0,.8);
+  background-color: #222831; 
+}
+button img {
+  float: left;
+  border-radius: 0px;
+}
